@@ -1,0 +1,17 @@
+#	parkhk
+#	DRAM size configuration
+#
+menu "Flash RAM Main Memory"
+config FRAM
+	bool	"Flash RAM Configuration"
+	help
+		Flash RAM Configuration	
+
+config FRAM_DSIZE
+	hex	"Max address for DRAM(using e820 memory map)"
+	depends on FRAM
+	default "080000000"
+	help
+		Check e820 map first
+
+endmenu
